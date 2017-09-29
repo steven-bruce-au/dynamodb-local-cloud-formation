@@ -12,11 +12,11 @@ class CloudFormationParser:
         self.dynamo_db_resource_list = []
         self.processed = set()
 
-    def load_json(self, filename):
-        # load the resource as JSON
-        with open(filename) as fileHandle:
-            jsonData = json.load(fileHandle)
-            return jsonData
+    # def load_json(self, filename):
+    #     # load the resource as JSON
+    #     with open(filename) as fileHandle:
+    #         jsonData = json.load(fileHandle)
+    #         return jsonData
 
     def load_yaml(self, filename):
         # load the resource as YAML
@@ -25,10 +25,10 @@ class CloudFormationParser:
             return yamlData
 
     def parse_cloud_formation_template(self, file_name):
-        if file_name.endswith('yaml'):
-            cloud_formation_json = self.load_yaml(file_name)
-        else:
-            cloud_formation_json = self.load_json(file_name)
+        # if file_name.endswith('yaml') or file_name.endswith('yml'):
+        cloud_formation_json = self.load_yaml(file_name)
+        # else:
+        #     cloud_formation_json = self.load_json(file_name)
 
         resources = cloud_formation_json['Resources']
 
