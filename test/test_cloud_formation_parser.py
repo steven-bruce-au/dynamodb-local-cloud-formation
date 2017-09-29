@@ -17,6 +17,10 @@ class TestCloudFormationParser(unittest.TestCase):
         # ensure that myTableName is constructed before myTableName2
         self.parse('test/data/sample.template', ['myTableName', 'myTableName2'])
 
+    def test_sample_yaml_template(self):
+        # ensure that myTableName is constructed before myTableName2
+        self.parse('test/data/sample.yaml.template', ['myTableName', 'myTableName2'])
+
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestCloudFormationParser)
 unittest.TextTestRunner(verbosity=2).run(suite)
