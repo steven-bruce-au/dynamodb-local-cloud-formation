@@ -6,7 +6,7 @@ class TestCloudFormationParser(unittest.TestCase):
     def parse(self, templateFileName, expectedTableNames):
         # parse the Cloud Formation Resource
         cloudFormationParser = CloudFormationParser()
-        tables = cloudFormationParser.parse_cloud_formation_template(templateFileName, args.type)
+        tables = cloudFormationParser.parse_cloud_formation_template(templateFileName)
 
         tableNames = list(map((lambda table: table.json['Properties']['TableName']), tables))
         self.assertEqual(tableNames, expectedTableNames)

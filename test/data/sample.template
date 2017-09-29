@@ -7,7 +7,7 @@
         "AttributeDefinitions" : [
           {
             "AttributeName" : "Album",
-            "AttributeType" : "S"   
+            "AttributeType" : "S"
           },
           {
             "AttributeName" : "Artist",
@@ -44,7 +44,7 @@
               "AttributeName" : "Artist",
               "KeyType" : "RANGE"
             }
-          ],                         
+          ],
           "Projection" : {
             "NonKeyAttributes" : ["Album"],
             "ProjectionType" : "INCLUDE"
@@ -65,7 +65,7 @@
               "AttributeName" : "Sales",
               "KeyType" : "RANGE"
             }
-          ],                           
+          ],
           "Projection" : {
             "NonKeyAttributes" : ["Artist"],
             "ProjectionType" : "INCLUDE"
@@ -80,15 +80,15 @@
 	    "AttributeDefinitions" : [
 	      {
 		"AttributeName" : "ArtistId",
-		"AttributeType" : "S"        
+		"AttributeType" : "S"
 	      },
 	      {
 		"AttributeName" : "Concert",
-		"AttributeType" : "S"        
+		"AttributeType" : "S"
 	      },
 	      {
 		"AttributeName" : "TicketSales",
-		"AttributeType" : "S"        
+		"AttributeType" : "S"
 	      }
 	    ],
 	    "KeySchema" : [
@@ -113,10 +113,10 @@
 		  "AttributeName" : "TicketSales",
 		  "KeyType" : "HASH"
 		}
-	      ],                           
+	      ],
 	      "Projection" : {
 		"ProjectionType" : "KEYS_ONLY"
-	      },    
+	      },
 	      "ProvisionedThroughput" : {
 		"ReadCapacityUnits" : "5",
 		"WriteCapacityUnits" : "5"
